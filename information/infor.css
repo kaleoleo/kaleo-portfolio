@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bgcolorHome: #161616;
+  --colorF: rgb(250, 250, 250);
+  --hoverF: #ffd300;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: #161616;
+  min-height: 2000px;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.5%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  position: -webkit-sticky;
+  top: 0;
+  transition: 0.3s ease-in-out;
+  /* background-color: var(--bgcolorHome); */
+  z-index: 9999;
+}
+
+#header.show {
+  top: -70px;
+}
+
+.work-header .menu-header a {
+  color: #ffd300;
+}
+
+.work-header .btn-back a {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border: 0.4px solid white;
+  padding: 0.3rem 0.3rem;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.work-header .btn-back a:hover {
+  background-color: white;
+  color: black;
+}
+
+.home-about {
+  padding-top: 19rem;
+}
+
+.home-about .email {
+  display: flex;
+  justify-content: center;
+}
+
+.email h3 {
+  color: #ffd300;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: "poppins", sans-serif;
+}
+
+/* isi */
+.isi {
+  content: "";
+}
+
+.isi .wrapper-flex {
+  display: flex;
+  justify-self: center;
+  /* align-items: center; */
+  gap: 1rem;
+  padding: 10rem 5rem;
+}
+
+.wrapper-flex .text1 {
+  flex: 1;
+  /* background-color: #ffd300; */
+  display: flex;
+  gap: -2rem;
+  justify-content: flex-start;
+}
+
+.text1 p {
+  width: 70%;
+  color: aliceblue;
+  font-size: 14px;
+  font-family: "inter", sans-serif;
+  line-height: 1.2rem;
+  text-align: left;
+  opacity: 0;
+  animation: slideTop 2s forwards;
+  animation-delay: 1.5s;
+}
+
+.text1 .layer2 {
+  margin-top: 1rem;
+}
+
+.text1 .layer3 {
+  margin-top: 1rem;
+}
+
+.text1 .l2 .layer22 {
+  padding: 3rem 0rem 3rem;
+}
+
+.text1 .l2 .layer22 {
+  font-size: 2rem;
+  color: white;
+  font-weight: 400;
+  color: #ffd300;
+}
+.wrapper-flex .text2 {
+  flex: 1;
+}
+
+.wrapper-flex .text2 p {
+  width: 35%;
+  color: #fff;
+  font-size: 14px;
+  font-family: "inter", sans-serif;
+  line-height: 1.5rem;
+  text-align: start;
+  opacity: 0;
+  animation: slideTop 2s forwards;
+  animation-delay: 1.5s;
+}
+/* done */
+
+/* section image */
+.foto {
+  margin-top: "";
+}
+
+.foto .wrapper-image {
+  display: flex;
+  justify-content: center;
+}
+
+.foto .wrapper-image img {
+  width: 24.7vw;
+  opacity: 0.8;
+}
+/* foto */
+
+.fuuter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.fuuter .socmed {
+  margin-left: "";
+}
+
+.fuuter .socmed a {
+  color: white;
+  transition: 0.3s ease-in-out;
+  margin-left: 3rem;
+}
+
+.fuuter .socmed a:hover {
+  color: #888;
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(-100);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(100);
+    opacity: 1;
+  }
+}

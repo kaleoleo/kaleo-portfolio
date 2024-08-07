@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bgcolorHome: #161616;
+  --colorF: rgb(250, 250, 250);
+  --hoverF: #ffd300;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  /* height: 2000px; */
+  text-transform: "";
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.5%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  position: -webkit-sticky;
+  top: 0;
+  transition: 0.3s ease-in-out;
+  /* background-color: var(--bgcolorHome); */
+  z-index: 9999;
+}
+
+#header.show {
+  top: -70px;
+}
+
+.work-header .menu-header a {
+  color: #ffd300;
+}
+
+.work-header .btn-back a {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border: 0.4px solid white;
+  padding: 0.3rem 0.3rem;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.work-header .btn-back a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* home */
+.home-work {
+  background-color: #161616;
+  color: white;
+}
+
+.home-work .text-work {
+  padding-top: 28rem;
+  padding-left: 8%;
+  padding-bottom: 4rem;
+}
+
+.text-work h1 {
+  font-size: 3.5rem;
+  font-weight: 550;
+  letter-spacing: -2px;
+  font-family: "inter", sans-serif;
+  line-height: 2.6rem;
+  opacity: 0;
+  animation: slideTop 2s forwards;
+  animation-delay: 0.9s;
+}
+
+.text-work h2 {
+  font-size: 2.5rem;
+  font-weight: 550;
+  letter-spacing: -2px;
+  font-family: "inter", sans-serif;
+  margin-left: 0.2rem;
+  opacity: 0;
+  animation: slideTop 2s forwards;
+  animation-delay: 2s;
+}
+
+.text-work .dd {
+  margin-left: -0.7rem;
+  margin-top: 1rem;
+}
+
+.dd a {
+  color: white;
+}
+
+/* home */
+
+/* section work */
+.service {
+  content: "";
+  padding: 0rem 4%;
+}
+
+.service .wrapper-line {
+  display: flex;
+  justify-content: center;
+  padding: 15rem 10% 0rem;
+  gap: 2rem;
+  /* align-items: center; */
+}
+
+.service .wrapper-de {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 7rem;
+}
+
+.service img {
+  width: 40vw;
+}
+
+.service .wrapper-line .appdev .wrapper-text h1 {
+  font-weight: 450;
+  font-size: 1.8rem;
+}
+
+.wrapper-text p {
+  margin-top: -0.2rem;
+  margin-bottom: 1rem;
+}
+
+.wrapper-text .btn {
+  display: inline-block;
+  color: black;
+  font-size: 16px;
+  transition: 0.2s ease-in-out;
+}
+
+.wrapper-text .btn:hover {
+  color: #888;
+}
+
+.wrapper-text .btn::after {
+  content: "";
+  display: block;
+  border-bottom: 0.1px solid #161616;
+  padding-bottom: 0.1rem;
+  transform: scaleX(0);
+  transition: 0.4s;
+}
+
+.wrapper-text .btn:hover::after {
+  transform: scaleX(1);
+}
+
+/* webdev */
+.wrapper-line .webdev {
+  width: "";
+}
+.wrapper-line .webdev .wrapper-text h1 {
+  color: black;
+  font-weight: 450;
+  font-size: 1.8rem;
+}
+/* webdev */
+
+/* ui */
+.service .wrapper-de .degrap .wrapper-text h1 {
+  color: black;
+  font-weight: 450;
+  font-size: 1.8rem;
+}
+
+.fuuter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 4rem;
+  background-color: #161616;
+  margin-top: 4rem;
+}
+
+.fuuter .text-fu p {
+  font-size: 13px;
+  color: white;
+}
+
+.fuuter .arrow-up a {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border: 0.4px solid white;
+  padding: 0.3rem 0.3rem;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.fuuter .arrow-up a:hover {
+  background-color: white;
+  color: black;
+}
+/* fuuter */
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(-100);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(100);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 98%;
+  }
+
+  .service .wrapper-center {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 2%;
+    overflow: hidden;
+  }
+
+  .service img {
+    width: 80vw;
+  }
+
+  .service .wrapper-line {
+    display: block;
+  }
+
+  .wrapper-line .appdev {
+    margin-bottom: 7rem;
+  }
+
+  .fuuter {
+    padding: 1rem;
+  }
+}
